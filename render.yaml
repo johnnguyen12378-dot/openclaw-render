@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     buildCommand: "npm install"
-    startCommand: "openclaw gateway --port 10000"
+    startCommand: "openclaw gateway --port 10000 --allow-unconfigured"
     envVars:
       - key: NODE_VERSION
         value: 22
