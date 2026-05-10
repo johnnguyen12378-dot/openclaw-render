@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: openclaw-bot
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "openclaw gateway --port 10000"
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: OPENCLAW_CHANNELS_TELEGRAM_ENABLED
+        value: "true"
+      - key: OPENCLAW_CHANNELS_TELEGRAM_TOKEN
+        sync: false
